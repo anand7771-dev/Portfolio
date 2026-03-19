@@ -34,6 +34,8 @@ React.useEffect(() => {
           <a href="#skills" className="hover:text-white">Skills</a>
           <a href="#projects" className="hover:text-white">Projects</a>
           <a href="#contact" className="hover:text-white">Contact</a>
+          <a href="#certifications" className="hover:text-white">Certifications</a>
+          <a href="#experience" className="hover:text-white">Experience</a>
         </div>
       </nav>
 
@@ -103,6 +105,122 @@ React.useEffect(() => {
           ))}
         </div>
       </section>
+
+      {/* CERTIFICATIONS */}
+      <section id="certifications" className="py-20">
+        <h2 className="text-4xl font-bold mb-10 text-center">Certifications</h2>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          {[
+            {
+              title: "Corporate Governance",
+              org: "Coursera",
+              file: "/certificates/corporate_governance.pdf"
+            },
+            {
+              title: "Business For Good",
+              org: "Coursera",
+              file: "/certificates/Business_for_Good.pdf"
+            },
+            {
+              title: "AI-Powered Cloud Engineer Virtual Internship",
+              org: "AWS",
+              file: "/certificates/AI_Powered_Cloud_Engineer.pdf"
+            },
+            {
+              title: "GEN-AI Virtual Internship",
+              org: "AWS",
+              file: "/certificates/AWS_GEN_AI.pdf"
+            },
+            {
+              title: "AWS Academy Data Engineering",
+              org: "AWS",
+              file: "/certificates/AWS_Academy_Data_Engineering.pdf"
+            },
+            {
+              title: "AWS Academy Machine Learning",
+              org: "AWS",
+              file: "/certificates/AWS_Machine_Learning.pdf"
+            },
+            {
+              title: "AI-ML VIRTUAL INTERNSHIP",
+              org: "Google",
+              file: "/certificates/GOOGLE_AI_ML.pdf"
+            },
+            {
+              title: "Android Developer Virtual Internship",
+              org: "Google",
+              file: "/certificates/GOOGLE_ANDROID_DEVELOPER.pdf"
+            },
+            {
+              title: "ICDCIT",
+              org: "KIIT",
+              file: "/certificates/ICDCIT_KIIT.pdf"
+            },
+            {
+              title: "SIH HACKATHON",
+              org: "Ministry of Education",
+              file: "/certificates/SIH.pdf"
+            },
+
+          ].map((cert) => (
+
+            <div
+              key={cert.title}
+              className="bg-white/5 backdrop-blur-xl p-6 rounded-2xl border border-white/10 hover:border-blue-400/50 hover:shadow-xl transition duration-300"
+            >
+              <h3 className="text-xl font-bold">{cert.title}</h3>
+              <p className="text-gray-400 mt-2">{cert.org}</p>
+
+              <a
+                href={cert.file}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 mt-3 inline-block"
+              >
+                View Certificate →
+              </a>
+            </div>
+
+          ))}
+
+        </div>
+      </section>
+
+      {/* EXPERIENCE */}
+<section id="experience" className="py-20">
+  <h2 className="text-4xl font-bold mb-10 text-center">Experience</h2>
+
+  <div className="space-y-6 max-w-4xl mx-auto">
+
+    {[
+      {
+        role: "Machine Learning Intern",
+        company: "CodeAlpha",
+        duration: "Jun 2025 – Sep 2025",
+        desc: "Built ML models for diabetes prediction and creditworthiness assessment using Random Forest and Logistic Regression."
+      },
+      
+    ].map((exp) => (
+
+      <div
+        key={exp.role}
+        className="bg-white/5 backdrop-blur-xl p-6 rounded-2xl border border-white/10 hover:border-blue-400/50 hover:shadow-xl transition duration-300"
+      >
+        <h3 className="text-xl font-bold">{exp.role}</h3>
+
+        <p className="text-blue-400 mt-1">{exp.company}</p>
+
+        <p className="text-gray-500 text-sm">{exp.duration}</p>
+
+        <p className="text-gray-400 mt-3">{exp.desc}</p>
+      </div>
+
+    ))}
+
+  </div>
+</section>
 
       {/* PROJECTS */}
       <section id="projects" className="py-20">
