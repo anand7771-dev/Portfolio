@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 export default function App() {
   const [mousePos, setMousePos] = React.useState({ x: 0, y: 0 });
@@ -32,20 +34,21 @@ React.useEffect(() => {
 
         <div className="flex gap-6 text-gray-300">
           <a href="#skills" className="hover:text-white">Skills</a>
-          <a href="#projects" className="hover:text-white">Projects</a>
-          <a href="#contact" className="hover:text-white">Contact</a>
           <a href="#certifications" className="hover:text-white">Certifications</a>
           <a href="#experience" className="hover:text-white">Experience</a>
+          <a href="#projects" className="hover:text-white">Projects</a>
+          <a href="#contact" className="hover:text-white">Contact</a>
         </div>
       </nav>
 
       {/* HERO */}
       <section className="h-screen flex flex-col items-center justify-center text-center pt-20">
         <motion.h1
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -50, scale: 0.8 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 text-transparent bg-clip-text"
+          whileHover={{ scale: 1.05 }}
+          className="text-4xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 text-transparent bg-clip-text drop-shadow-[0_0_20px_rgba(168,85,247,0.6)]"
         >
           Hi, I'm Anand Dev 👋
         </motion.h1>
@@ -56,49 +59,66 @@ React.useEffect(() => {
           transition={{ delay: 0.5 }}
           className="mt-4 text-gray-400 text-lg md:text-xl"
         >
-          Machine Learning Engineer | AI Enthusiast
+          <motion.span
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1 }}
+          >
+            Machine Learning Engineer | AI Enthusiast 🚀
+          </motion.span>
         </motion.p>
 
         <div className="flex gap-4 mt-6 flex-wrap justify-center">
-          <a
-            href="https://github.com/anand7771-dev" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-blue-600 px-6 py-2 rounded-xl hover:shadow-lg hover:shadow-blue-500/40 transition duration-300"
-          >
-            GitHub
-          </a>
 
-          <a
-            href="https://www.linkedin.com/in/anand-dev-0ba936294/" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border px-6 py-2 rounded-xl hover:bg-white hover:text-black transition"
-          >
+            <a
+              href="https://github.com/anand7771-dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-blue-600 px-6 py-2 rounded-xl hover:shadow-lg hover:shadow-blue-500/40 transition duration-300"
+            >
+              <FaGithub />
+              GitHub
+            </a>
 
-            LinkedIn
-          </a>
+            <a
+              href="https://linkedin.com/in/anand-dev-0ba936294/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-blue-700 px-6 py-2 rounded-xl hover:bg-blue-800 text-white transition duration-300 shadow-lg hover:shadow-blue-500/40"
+            >
+              <FaLinkedin />
+              LinkedIn
+            </a>
 
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-green-600 px-6 py-2 rounded-xl hover:bg-green-700 transition"
-          >
-            Resume
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              className="bg-green-600 px-6 py-2 rounded-xl hover:bg-green-700 transition"
+            >
+              Resume
+              
+            <p className="text-sm text-yellow-400 mt-3 font-semibold animate-pulse">
+  🚀 Open to Internships & Opportunities
+</p>
+
           </a>
         </div>
       </section>
 
       {/* SKILLS */}
       <section id="skills" className="py-20">
-        <h2 className="text-4xl font-bold mb-10 text-center">Skills</h2>
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl font-bold mb-10 text-center bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
+          >Skills</motion.h2>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {["Python", "Machine Learning", "TensorFlow", "AWS"].map((skill) => (
             <div
               key={skill}
-              className="bg-gray-800 p-4 rounded-xl text-center hover:bg-blue-600 transition"
+              className="bg-gray-800 p-4 rounded-xl text-center hover:bg-blue-600 hover:scale-105 transition duration-300 cursor-pointer"
             >
               {skill}
             </div>
@@ -108,7 +128,12 @@ React.useEffect(() => {
 
       {/* CERTIFICATIONS */}
       <section id="certifications" className="py-20">
-        <h2 className="text-4xl font-bold mb-10 text-center">Certifications</h2>
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl font-bold mb-10 text-center bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
+        >Certifications</motion.h2>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
@@ -122,6 +147,16 @@ React.useEffect(() => {
               title: "Business For Good",
               org: "Coursera",
               file: "/certificates/Business_for_Good.pdf"
+            },
+            {
+              title: "ICDCIT",
+              org: "KIIT",
+              file: "/certificates/ICDCIT_KIIT.pdf"
+            },
+            {
+              title: "SIH HACKATHON",
+              org: "Ministry of Education",
+              file: "/certificates/SIH.pdf"
             },
             {
               title: "AI-Powered Cloud Engineer Virtual Internship",
@@ -153,22 +188,16 @@ React.useEffect(() => {
               org: "Google",
               file: "/certificates/GOOGLE_ANDROID_DEVELOPER.pdf"
             },
-            {
-              title: "ICDCIT",
-              org: "KIIT",
-              file: "/certificates/ICDCIT_KIIT.pdf"
-            },
-            {
-              title: "SIH HACKATHON",
-              org: "Ministry of Education",
-              file: "/certificates/SIH.pdf"
-            },
+            
 
           ].map((cert) => (
 
             <div
               key={cert.title}
-              className="bg-white/5 backdrop-blur-xl p-6 rounded-2xl border border-white/10 hover:border-blue-400/50 hover:shadow-xl transition duration-300"
+              className="relative bg-white/5 backdrop-blur-xl p-6 rounded-2xl border border-white/10 
+                        before:absolute before:inset-0 before:rounded-2xl 
+                        before:bg-gradient-to-r before:from-blue-500/20 before:to-purple-500/20 
+                        before:opacity-0 hover:before:opacity-100 before:transition"
             >
               <h3 className="text-xl font-bold">{cert.title}</h3>
               <p className="text-gray-400 mt-2">{cert.org}</p>
@@ -190,7 +219,12 @@ React.useEffect(() => {
 
       {/* EXPERIENCE */}
 <section id="experience" className="py-20">
-  <h2 className="text-4xl font-bold mb-10 text-center">Experience</h2>
+  <motion.h2
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
+    className="text-4xl font-bold mb-10 text-center bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
+  >Experience</motion.h2>
 
   <div className="space-y-6 max-w-4xl mx-auto">
 
@@ -206,7 +240,10 @@ React.useEffect(() => {
 
       <div
         key={exp.role}
-        className="bg-white/5 backdrop-blur-xl p-6 rounded-2xl border border-white/10 hover:border-blue-400/50 hover:shadow-xl transition duration-300"
+        className="relative bg-white/5 backdrop-blur-xl p-6 rounded-2xl border border-white/10 
+                  before:absolute before:inset-0 before:rounded-2xl 
+                  before:bg-gradient-to-r before:from-blue-500/20 before:to-purple-500/20 
+                  before:opacity-0 hover:before:opacity-100 before:transition"
       >
         <h3 className="text-xl font-bold">{exp.role}</h3>
 
@@ -224,7 +261,12 @@ React.useEffect(() => {
 
       {/* PROJECTS */}
       <section id="projects" className="py-20">
-        <h2 className="text-4xl font-bold mb-10 text-center">Projects</h2>
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl font-bold mb-10 text-center bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
+        >Projects</motion.h2>
 
         <motion.div
           initial="hidden"
@@ -293,10 +335,18 @@ React.useEffect(() => {
 
       {/* CONTACT */}
       <section id="contact" className="py-20 text-center">
-        <h2 className="text-4xl font-bold mb-6">Contact</h2>
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl font-bold mb-10 text-center bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
+        >Contact</motion.h2>
         <p className="text-gray-400">ananddev7771@gmail.com</p>
         <p className="text-gray-400">+91 9162892612</p>
       </section>
+      <footer className="text-center text-gray-500 text-sm py-6 border-t border-gray-800">
+  © {new Date().getFullYear()} Anand Dev. All rights reserved.
+</footer>
     </div>
   );
 }
