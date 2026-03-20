@@ -127,95 +127,100 @@ React.useEffect(() => {
       </section>
 
       {/* CERTIFICATIONS */}
-      <section id="certifications" className="py-20">
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl font-bold mb-10 text-center bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
-        >Certifications</motion.h2>
+<section id="certifications" className="py-20">
+  <motion.h2
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
+    className="text-4xl font-bold mb-10 text-center bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
+  >
+    Certifications
+  </motion.h2>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-          {[
-            {
-              title: "Corporate Governance",
-              org: "Coursera",
-              file: "/certificates/corporate_governance.pdf"
-            },
-            {
-              title: "Business For Good",
-              org: "Coursera",
-              file: "/certificates/Business_for_Good.pdf"
-            },
-            {
-              title: "ICDCIT",
-              org: "KIIT",
-              file: "/certificates/ICDCIT_KIIT.pdf"
-            },
-            {
-              title: "SIH HACKATHON",
-              org: "Ministry of Education",
-              file: "/certificates/SIH.pdf"
-            },
-            {
-              title: "AI-Powered Cloud Engineer Virtual Internship",
-              org: "AWS",
-              file: "/certificates/AI_Powered_Cloud_Engineer.pdf"
-            },
-            {
-              title: "GEN-AI Virtual Internship",
-              org: "AWS",
-              file: "/certificates/AWS_GEN_AI.pdf"
-            },
-            {
-              title: "AWS Academy Data Engineering",
-              org: "AWS",
-              file: "/certificates/AWS_Academy_Data_Engineering.pdf"
-            },
-            {
-              title: "AWS Academy Machine Learning",
-              org: "AWS",
-              file: "/certificates/AWS_Machine_Learning.pdf"
-            },
-            {
-              title: "AI-ML VIRTUAL INTERNSHIP",
-              org: "Google",
-              file: "/certificates/GOOGLE_AI_ML.pdf"
-            },
-            {
-              title: "Android Developer Virtual Internship",
-              org: "Google",
-              file: "/certificates/GOOGLE_ANDROID_DEVELOPER.pdf"
-            },
-            
+    {[
+      {
+        title: "Corporate Governance",
+        org: "Coursera",
+        file: "/certificates/corporate_governance.pdf"
+      },
+      {
+        title: "Business For Good",
+        org: "Coursera",
+        file: "/certificates/Business_for_Good.pdf"
+      },
+      {
+        title: "ICDCIT",
+        org: "KIIT",
+        file: "/certificates/ICDCIT_KIIT.pdf"
+      },
+      {
+        title: "SIH HACKATHON",
+        org: "Ministry of Education",
+        file: "/certificates/SIH.pdf"
+      },
+      {
+        title: "AI-Powered Cloud Engineer Virtual Internship",
+        org: "AWS",
+        file: "/certificates/AI_Powered_Cloud_Engineer.pdf"
+      },
+      {
+        title: "GEN-AI Virtual Internship",
+        org: "AWS",
+        file: "/certificates/AWS_GEN_AI.pdf"
+      },
+      {
+        title: "AWS Academy Data Engineering",
+        org: "AWS",
+        file: "/certificates/AWS_Academy_Data_Engineering.pdf"
+      },
+      {
+        title: "AWS Academy Machine Learning",
+        org: "AWS",
+        file: "/certificates/AWS_Machine_Learning.pdf"
+      },
+      {
+        title: "AI-ML VIRTUAL INTERNSHIP",
+        org: "Google",
+        file: "/certificates/GOOGLE_AI_ML.pdf"
+      },
+      {
+        title: "Android Developer Virtual Internship",
+        org: "Google",
+        file: "/certificates/GOOGLE_ANDROID_DEVELOPER.pdf"
+      },
+    ].map((cert, index) => (
 
-          ].map((cert) => (
+      <div
+  key={cert.title}
+  className="relative bg-white/5 backdrop-blur-xl p-6 rounded-2xl border border-white/10 
+             hover:scale-105 transition duration-300"
+>
+  
+  {/* Overlay FIXED */}
+  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/20 to-purple-500/20 
+                  opacity-0 hover:opacity-100 transition pointer-events-none">
+  </div>
 
-            <div
-              key={cert.title}
-              className="relative bg-white/5 backdrop-blur-xl p-6 rounded-2xl border border-white/10 
-                        before:absolute before:inset-0 before:rounded-2xl 
-                        before:bg-gradient-to-r before:from-blue-500/20 before:to-purple-500/20 
-                        before:opacity-0 hover:before:opacity-100 before:transition"
-            >
-              <h3 className="text-xl font-bold">{cert.title}</h3>
-              <p className="text-gray-400 mt-2">{cert.org}</p>
+  <h3 className="text-xl font-bold relative z-10">{cert.title}</h3>
+  <p className="text-gray-400 mt-2 relative z-10">{cert.org}</p>
 
-              <a
-                href={cert.file}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-400 mt-3 inline-block"
-              >
-                View Certificate →
-              </a>
-            </div>
+  <a
+    href={cert.file}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-blue-400 mt-4 inline-block hover:underline relative z-10 cursor-pointer"
+  >
+    View Certificate →
+  </a>
 
-          ))}
+</div>
 
-        </div>
-      </section>
+    ))}
+
+  </div>
+</section>
 
       {/* EXPERIENCE */}
 <section id="experience" className="py-20">
