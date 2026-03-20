@@ -151,6 +151,11 @@ React.useEffect(() => {
         file: "/certificates/Business_for_Good.pdf"
       },
       {
+        title: "Ethical Decision Making",
+        org: "Coursera",
+        file: "/certificates/Ethical_Decision_Making.pdf"
+      },
+      {
         title: "ICDCIT",
         org: "KIIT",
         file: "/certificates/ICDCIT_KIIT.pdf"
