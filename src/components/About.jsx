@@ -43,7 +43,7 @@ export default function About() {
             },
             {
               icon: FaMapMarkerAlt,
-              label: 'India',
+              label: 'Bihar,India',
             },
             {
               icon: FaCode,
