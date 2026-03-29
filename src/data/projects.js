@@ -10,13 +10,14 @@ export const projects = [
     title: 'CNN Image Classifier',
     desc: 'Deep learning clothing classifier built with CNNs, trained on Fashion-MNIST with a Streamlit web interface for real-time inference.',
     tech: ['Python', 'TensorFlow', 'CNN', 'Streamlit'],
-    github: 'https://github.com/anand7771-dev',
+    live: 'https://cnn-image-classifier-dev7771.streamlit.app/',
+    github: 'https://github.com/anand7771-dev/CNN-IMAGE-CLASSIFIER',
   },
   {
     title: 'PurePath',
     desc: 'Intelligent route planning system integrated with real-time Air Quality Index data to recommend the healthiest travel routes.',
     tech: ['Python', 'APIs', 'Data Analysis'],
-    github: 'https://github.com/anand7771-dev',
+    github: 'https://github.com/anand7771-dev/PURE-PATH',
   },
   {
     title: 'Diabetes Prediction',
