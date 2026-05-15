@@ -1,5 +1,12 @@
 export const projects = [
   {
+    title: 'CodeInsight AI',
+    desc: 'Full-stack AI-powered Java code review platform. Analyzes code quality using 17 static analysis rules across Style, Performance, Best Practice & Complexity categories. Returns a quality score, categorized warnings, and actionable suggestions.',
+    tech: ['Java 17', 'Spring Boot', 'React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Monaco Editor'],
+    live: 'https://code-insight-ai-eight.vercel.app',
+    github: 'https://github.com/anand7771-dev/CodeInsight-AI',
+  },
+  {
     title: 'Krishi-AI',
     desc: 'AI-powered agriculture advisory system providing crop recommendations, disease detection, and weather-based farming guidance for data-driven decisions.',
     tech: ['Python', 'Machine Learning', 'React', 'APIs'],
