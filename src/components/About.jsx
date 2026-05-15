@@ -43,7 +43,7 @@ export default function About() {
             },
             {
               icon: FaMapMarkerAlt,
-              label: 'Bihar,India',
+              label: 'Bhubaneswar, India',
             },
             {
               icon: FaCode,

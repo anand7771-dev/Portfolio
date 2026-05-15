@@ -61,7 +61,7 @@ export default function Contact() {
                 label: '+91 9162892612',
                 href: 'tel:+919162892612',
               },
-              { icon: FaMapMarkerAlt, label: 'Bihar,India', href: null },
+              { icon: FaMapMarkerAlt, label: 'Bhubaneswar, India', href: null },
             ].map((item) => (
               <div key={item.label} className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center">
