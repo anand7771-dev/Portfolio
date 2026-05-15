@@ -41,9 +41,16 @@ export default function Experience() {
             >
               <div className="bg-white/5 backdrop-blur-xl p-6 rounded-2xl border border-white/10 hover:border-blue-500/30 transition-all duration-300 group">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
-                  <h3 className="text-xl font-bold text-white group-hover:text-blue-300 transition-colors">
-                    {exp.role}
-                  </h3>
+                  <div className="flex items-center gap-2">
+                    <h3 className="text-xl font-bold text-white group-hover:text-blue-300 transition-colors">
+                      {exp.role}
+                    </h3>
+                    {exp.current && (
+                      <span className="text-xs px-2 py-0.5 bg-green-500/15 text-green-400 rounded-full border border-green-500/25 font-semibold">
+                        Current
+                      </span>
+                    )}
+                  </div>
                   <span className="text-gray-500 text-sm">{exp.duration}</span>
                 </div>
                 <p className="text-blue-400 mt-1 font-medium">{exp.company}</p>
@@ -60,6 +67,18 @@ export default function Experience() {
                         {t}
                       </span>
                     ))}
+                  </div>
+                )}
+                {exp.offerLetter && (
+                  <div className="mt-4">
+                    <a
+                      href={exp.offerLetter}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 bg-blue-500/10 text-blue-300 rounded-full border border-blue-500/20 hover:bg-blue-500/20 transition-colors duration-200"
+                    >
+                      📄 View Offer Letter
+                    </a>
                   </div>
                 )}
               </div>

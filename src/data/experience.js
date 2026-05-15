@@ -1,5 +1,14 @@
 export const experience = [
   {
+    role: 'Software Engineering Intern',
+    company: 'Siemens',
+    duration: 'May 2025 – Present',
+    current: true,
+    desc: 'Currently working as a Software Engineering Intern at Siemens, contributing to industrial software solutions and digital transformation initiatives. Gaining hands-on experience with enterprise-grade systems and engineering workflows.',
+    tech: ['Software Engineering', 'Industrial IoT', 'Digital Transformation'],
+    offerLetter: '/certificates/Siemens_Offer_Letter.pdf',
+  },
+  {
     role: 'Machine Learning Intern',
     company: 'CodeAlpha',
     duration: 'Jun 2025 – Sep 2025',
