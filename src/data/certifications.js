@@ -1,4 +1,5 @@
 export const certifications = [
+  { title: 'Meta Hackathon', org: 'Meta', file: '/certificates/Meta_Hackathon.pdf' },
   { title: 'SIH Hackathon', org: 'Ministry of Education', file: '/certificates/SIH.pdf' },
   { title: 'ICDCIT Conference', org: 'KIIT', file: '/certificates/ICDCIT_KIIT.pdf' },
   { title: 'AI-Powered Cloud Engineer Virtual Internship', org: 'AWS', file: '/certificates/AI_Powered_Cloud_Engineer.pdf' },
