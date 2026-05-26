@@ -96,7 +96,7 @@ export default function Projects() {
               <div className="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-2">App Info</div>
               <div className="flex justify-between text-sm">
                 <span className="text-gray-400">Platform</span>
-                <span className="text-white font-medium">Android + iOS</span>
+                <span className="text-white font-medium">Android</span>
               </div>
               <div className="flex justify-between text-sm">
                 <span className="text-gray-400">Version</span>
