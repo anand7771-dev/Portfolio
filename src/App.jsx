@@ -11,6 +11,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ParticleField from './components/ParticleField';
 import ScrollProgressBar from './components/ScrollProgressBar';
+import CustomCursor from './components/CursorTrail';
 import BackToTop from './components/BackToTop';
 
 export default function App() {
@@ -31,6 +32,9 @@ export default function App() {
 
       {/* Animated particle field */}
       <ParticleField />
+
+      {/* Custom cursor */}
+      <CustomCursor />
 
       {/* Mouse-follow gradient */}
       <div
