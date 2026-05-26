@@ -32,14 +32,14 @@ export default function Certifications() {
               visible: { opacity: 1, scale: 1 },
             }}
             whileHover={{ scale: 1.03 }}
-            className="group bg-white/[0.03] backdrop-blur-xl p-5 rounded-2xl border border-white/10 hover:border-blue-500/30 transition-all duration-300"
+            className="group bg-white/70 backdrop-blur-xl p-5 rounded-2xl border border-indigo-100 hover:border-blue-400/50 hover:shadow-md hover:shadow-blue-100 transition-all duration-300"
           >
             <div className="flex items-start gap-3">
               <div className="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center shrink-0 group-hover:bg-blue-500/20 transition-colors">
                 <FaAward className="text-blue-400" />
               </div>
               <div className="min-w-0">
-                <h3 className="text-sm font-bold text-white leading-tight">
+                <h3 className="text-sm font-bold text-gray-900 leading-tight">
                   {cert.title}
                 </h3>
                 <p className="text-gray-500 text-xs mt-1">{cert.org}</p>

@@ -46,14 +46,14 @@ export default function Navbar() {
     <nav
       className={`fixed top-4 left-1/2 -translate-x-1/2 w-[92%] md:w-[70%] z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-gray-950/80 backdrop-blur-xl shadow-2xl shadow-blue-500/5 border-white/10'
-          : 'bg-gray-950/40 backdrop-blur-md border-white/5'
+          ? 'bg-white/90 backdrop-blur-xl shadow-lg shadow-indigo-100 border-indigo-100'
+          : 'bg-white/60 backdrop-blur-md border-indigo-50'
       } border rounded-2xl px-6 py-3`}
     >
       <div className="flex justify-between items-center">
         <a
           href="#"
-          className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
+          className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
         >
           Anand Dev
         </a>
@@ -65,8 +65,8 @@ export default function Navbar() {
               href={href}
               className={`text-sm transition-all duration-200 ${
                 activeSection === href.slice(1)
-                  ? 'text-blue-400 font-semibold'
-                  : 'text-gray-400 hover:text-white'
+                  ? 'text-blue-600 font-semibold'
+                  : 'text-gray-600 hover:text-gray-900'
               }`}
             >
               {name}
@@ -99,8 +99,8 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className={`text-sm transition-colors pl-2 border-l-2 ${
                   activeSection === href.slice(1)
-                    ? 'text-blue-400 border-blue-400'
-                    : 'text-gray-400 hover:text-white border-transparent'
+                    ? 'text-blue-600 border-blue-500'
+                    : 'text-gray-600 hover:text-gray-900 border-transparent'
                 }`}
               >
                 {name}

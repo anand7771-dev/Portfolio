@@ -14,7 +14,7 @@ export default function Projects() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-4xl font-bold mb-14 text-center bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
+        className="text-4xl font-bold mb-14 text-center bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent glow-heading"
       >
         Projects
       </motion.h2>
@@ -27,7 +27,7 @@ export default function Projects() {
         viewport={{ once: true }}
         className="max-w-6xl mx-auto mb-8"
       >
-        <div className="group relative rounded-2xl border border-blue-500/30 bg-gradient-to-br from-blue-500/[0.07] via-white/[0.02] to-purple-500/[0.07] backdrop-blur-xl overflow-hidden hover:border-blue-400/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10">
+        <div className="group relative rounded-2xl border border-indigo-200 bg-white/70 backdrop-blur-xl overflow-hidden hover:border-blue-400/60 transition-all duration-300 hover:shadow-xl hover:shadow-blue-100">
           {/* Top animated gradient bar */}
           <div className="h-[2px] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500" />
 
@@ -47,10 +47,10 @@ export default function Projects() {
                 </span>
               </div>
 
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors duration-300">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
                 {featured.title}
               </h3>
-              <p className="text-gray-400 text-sm leading-relaxed mb-5">
+              <p className="text-gray-600 text-sm leading-relaxed mb-5">
                 {featured.desc}
               </p>
 
@@ -92,27 +92,27 @@ export default function Projects() {
             </div>
 
             {/* Right: Stats card */}
-            <div className="mt-8 md:mt-0 md:w-56 shrink-0 bg-white/[0.03] border border-white/10 rounded-xl p-5 space-y-4">
-              <div className="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-2">App Info</div>
+            <div className="mt-8 md:mt-0 md:w-56 shrink-0 bg-indigo-50/80 border border-indigo-100 rounded-xl p-5 space-y-4">
+              <div className="text-xs text-gray-400 uppercase tracking-widest font-semibold mb-2">App Info</div>
               <div className="flex justify-between text-sm">
-                <span className="text-gray-400">Platform</span>
-                <span className="text-white font-medium">Android</span>
+                <span className="text-gray-500">Platform</span>
+                <span className="text-gray-900 font-medium">Android</span>
               </div>
               <div className="flex justify-between text-sm">
-                <span className="text-gray-400">Version</span>
-                <span className="text-white font-medium">1.0.0</span>
+                <span className="text-gray-500">Version</span>
+                <span className="text-gray-900 font-medium">1.0.0</span>
               </div>
               <div className="flex justify-between text-sm">
                 <span className="text-gray-400">Build</span>
                 <span className="text-green-400 font-medium">✓ Shipped</span>
               </div>
               <div className="flex justify-between text-sm">
-                <span className="text-gray-400">Backend</span>
-                <span className="text-orange-400 font-medium">Firebase</span>
+                <span className="text-gray-500">Backend</span>
+                <span className="text-orange-500 font-medium">Firebase</span>
               </div>
               <div className="flex justify-between text-sm">
-                <span className="text-gray-400">Language</span>
-                <span className="text-blue-400 font-medium">TypeScript</span>
+                <span className="text-gray-500">Language</span>
+                <span className="text-blue-600 font-medium">TypeScript</span>
               </div>
             </div>
           </div>
@@ -137,16 +137,16 @@ export default function Projects() {
               visible: { opacity: 1, y: 0 },
             }}
             whileHover={{ y: -8 }}
-            className="group bg-white/[0.03] backdrop-blur-xl rounded-2xl border border-white/10 hover:border-blue-500/30 overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/5"
+            className="group bg-white/70 backdrop-blur-xl rounded-2xl border border-indigo-100 hover:border-blue-400/50 overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-blue-100"
           >
             {/* Gradient bar */}
             <div className="h-1 bg-gradient-to-r from-blue-500 to-purple-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
 
             <div className="p-6">
-              <h3 className="text-xl font-bold text-white group-hover:text-blue-300 transition-colors duration-300">
+              <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
                 {proj.title}
               </h3>
-              <p className="text-gray-400 mt-2 text-sm leading-relaxed">
+              <p className="text-gray-600 mt-2 text-sm leading-relaxed">
                 {proj.desc}
               </p>
 

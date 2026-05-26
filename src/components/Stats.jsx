@@ -40,7 +40,7 @@ function Counter({ target, label, suffix = '' }) {
         {count}
         {suffix}
       </div>
-      <p className="text-gray-400 mt-2 text-lg">{label}</p>
+      <p className="text-gray-500 mt-2 text-lg">{label}</p>
     </div>
   );
 }
@@ -54,7 +54,7 @@ export default function Stats() {
       viewport={{ once: true }}
       className="py-16"
     >
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto bg-white/[0.03] border border-white/10 rounded-2xl p-10 backdrop-blur-sm">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto bg-white/60 border border-indigo-100 rounded-2xl p-10 backdrop-blur-sm shadow-sm">
         <Counter target={8} label="Projects" suffix="+" />
         <Counter target={12} label="Certifications" />
         <Counter target={2} label="Internship" />

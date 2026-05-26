@@ -26,7 +26,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="text-white min-h-screen font-sans relative overflow-hidden" style={{background: 'linear-gradient(135deg, #080e20 0%, #0b1230 40%, #0d1040 70%, #080e20 100%)'}}>
+    <div className="text-gray-900 min-h-screen font-sans relative overflow-hidden" style={{background: 'linear-gradient(135deg, #f0f4ff 0%, #eaedff 40%, #f5f0ff 70%, #f0f4ff 100%)'}}>
       {/* Scroll progress bar */}
       <ScrollProgressBar />
 
@@ -44,18 +44,17 @@ export default function App() {
         }}
       />
 
-      {/* Background blobs with aurora animation */}
+      {/* Background blobs - soft pastels for light theme */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-        <div className="aurora-blob absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-blue-600/[0.15] rounded-full blur-[120px]" />
-        <div className="aurora-blob absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-purple-600/[0.13] rounded-full blur-[120px]" style={{animationDelay:'-6s'}} />
-        <div className="aurora-blob absolute top-[35%] left-[45%] w-[500px] h-[500px] bg-indigo-500/[0.10] rounded-full blur-[120px]" style={{animationDelay:'-12s'}} />
-        <div className="aurora-blob absolute top-[60%] right-[20%] w-[350px] h-[350px] bg-cyan-500/[0.07] rounded-full blur-[100px]" style={{animationDelay:'-4s'}} />
+        <div className="aurora-blob absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-blue-400/[0.12] rounded-full blur-[120px]" />
+        <div className="aurora-blob absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-purple-400/[0.10] rounded-full blur-[120px]" style={{animationDelay:'-6s'}} />
+        <div className="aurora-blob absolute top-[35%] left-[45%] w-[500px] h-[500px] bg-indigo-400/[0.08] rounded-full blur-[120px]" style={{animationDelay:'-12s'}} />
+        <div className="aurora-blob absolute top-[60%] right-[20%] w-[350px] h-[350px] bg-violet-400/[0.07] rounded-full blur-[100px]" style={{animationDelay:'-4s'}} />
       </div>
 
-      {/* Grid pattern - slightly more visible */}
-      <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(to_right,#6366f108_1px,transparent_1px),linear-gradient(to_bottom,#6366f108_1px,transparent_1px)] bg-[size:48px_48px]" />
-      {/* Diagonal accent lines */}
-      <div className="absolute inset-0 pointer-events-none opacity-[0.015]" style={{backgroundImage: 'repeating-linear-gradient(45deg, #818cf8 0px, #818cf8 1px, transparent 1px, transparent 60px)'}} />
+      {/* Grid pattern for light theme */}
+      <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(to_right,#6366f10a_1px,transparent_1px),linear-gradient(to_bottom,#6366f10a_1px,transparent_1px)] bg-[size:48px_48px]" />
+      <div className="absolute inset-0 pointer-events-none opacity-[0.025]" style={{backgroundImage: 'repeating-linear-gradient(45deg, #6366f1 0px, #6366f1 1px, transparent 1px, transparent 60px)'}} />
 
       {/* Main content */}
       <div className="relative z-10 px-6 md:px-20">

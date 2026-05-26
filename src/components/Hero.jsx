@@ -106,7 +106,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.8 }}
-        className="mt-6 text-xl md:text-2xl text-gray-300 h-8"
+        className="mt-6 text-xl md:text-2xl text-gray-600 h-8"
       >
         <span>{displayText}</span>
         <span className="animate-pulse text-blue-400 ml-0.5 font-light">|</span>
@@ -133,7 +133,7 @@ export default function Hero() {
           href="https://github.com/anand7771-dev"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 bg-white/5 border border-white/10 backdrop-blur-sm px-6 py-2.5 rounded-xl hover:bg-white/10 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300"
+          className="flex items-center gap-2 bg-white/80 border border-indigo-200 backdrop-blur-sm px-6 py-2.5 rounded-xl text-gray-700 hover:bg-white hover:border-blue-400 hover:shadow-lg hover:shadow-blue-100 transition-all duration-300"
         >
           <FaGithub className="text-lg" /> GitHub
         </a>
@@ -141,7 +141,7 @@ export default function Hero() {
           href="https://linkedin.com/in/anand-dev-0ba936294/"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 bg-blue-600/20 border border-blue-500/30 px-6 py-2.5 rounded-xl hover:bg-blue-600/30 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300"
+          className="flex items-center gap-2 bg-blue-600/10 border border-blue-300 px-6 py-2.5 rounded-xl text-blue-700 hover:bg-blue-600/20 hover:shadow-lg hover:shadow-blue-200 transition-all duration-300"
         >
           <FaLinkedin className="text-lg" /> LinkedIn
         </a>

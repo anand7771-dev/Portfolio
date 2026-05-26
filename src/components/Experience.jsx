@@ -9,7 +9,7 @@ export default function Experience() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-4xl font-bold mb-14 text-center bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
+        className="text-4xl font-bold mb-14 text-center bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
       >
         Experience
       </motion.h2>
@@ -39,10 +39,10 @@ export default function Experience() {
               viewport={{ once: true }}
               className="flex-1 pb-2"
             >
-              <div className="bg-white/5 backdrop-blur-xl p-6 rounded-2xl border border-white/10 hover:border-blue-500/30 transition-all duration-300 group">
+              <div className="bg-white/70 backdrop-blur-xl p-6 rounded-2xl border border-indigo-100 hover:border-blue-400/50 hover:shadow-md hover:shadow-blue-100 transition-all duration-300 group">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
                   <div className="flex items-center gap-2">
-                    <h3 className="text-xl font-bold text-white group-hover:text-blue-300 transition-colors">
+                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
                       {exp.role}
                     </h3>
                     {exp.current && (
@@ -51,10 +51,10 @@ export default function Experience() {
                       </span>
                     )}
                   </div>
-                  <span className="text-gray-500 text-sm">{exp.duration}</span>
+                  <span className="text-gray-400 text-sm">{exp.duration}</span>
                 </div>
                 <p className="text-blue-400 mt-1 font-medium">{exp.company}</p>
-                <p className="text-gray-400 mt-3 text-sm leading-relaxed">
+                <p className="text-gray-500 mt-3 text-sm leading-relaxed">
                   {exp.desc}
                 </p>
                 {exp.tech && (
