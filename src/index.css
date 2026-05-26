@@ -19,7 +19,8 @@ body {
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #030712;
+  background: linear-gradient(135deg, #080e20 0%, #0b1230 40%, #0d1040 70%, #080e20 100%);
+  background-attachment: fixed;
 }
 
 /* Custom Scrollbar */
@@ -129,4 +130,94 @@ body {
 
 .aurora-blob {
   animation: aurora 18s ease-in-out infinite;
+}
+
+/* ─── Back to top button ─── */
+@keyframes bounce-up {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-5px); }
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 50;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(139,92,246,0.4);
+  animation: bounce-up 2s ease-in-out infinite;
+  transition: opacity 0.3s, transform 0.2s;
+}
+
+.back-to-top:hover {
+  transform: scale(1.15) translateY(-3px);
+  box-shadow: 0 8px 30px rgba(139,92,246,0.6);
+}
+
+/* ─── Button glow on hover ─── */
+@keyframes btn-glow {
+  0%, 100% { box-shadow: 0 0 8px rgba(59,130,246,0.3); }
+  50%       { box-shadow: 0 0 22px rgba(139,92,246,0.6), 0 0 40px rgba(59,130,246,0.2); }
+}
+
+.btn-glow-hover:hover {
+  animation: btn-glow 1.5s ease-in-out infinite;
+}
+
+/* ─── Ripple click effect ─── */
+@keyframes ripple {
+  to { transform: scale(4); opacity: 0; }
+}
+
+.ripple-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple-container .ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  transform: scale(0);
+  animation: ripple 0.6s linear;
+  pointer-events: none;
+}
+
+/* ─── Neon text flicker ─── */
+@keyframes neon-flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow: 0 0 10px #3b82f6, 0 0 20px #3b82f6, 0 0 40px #8b5cf6;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+/* ─── Spotlight card effect ─── */
+.spotlight-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.spotlight-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(99,102,241,0.12) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.spotlight-card:hover::before {
+  opacity: 1;
 }
