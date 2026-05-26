@@ -9,6 +9,8 @@ import Projects from './components/Projects';
 import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ParticleField from './components/ParticleField';
+import ScrollProgressBar from './components/ScrollProgressBar';
 
 export default function App() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -23,19 +25,25 @@ export default function App() {
 
   return (
     <div className="bg-gray-950 text-white min-h-screen font-sans relative overflow-hidden">
+      {/* Scroll progress bar */}
+      <ScrollProgressBar />
+
+      {/* Animated particle field */}
+      <ParticleField />
+
       {/* Mouse-follow gradient */}
       <div
         className="pointer-events-none fixed inset-0 z-0 transition-opacity duration-300"
         style={{
-          background: `radial-gradient(600px at ${mousePos.x}px ${mousePos.y}px, rgba(59,130,246,0.07), transparent 80%)`,
+          background: `radial-gradient(600px at ${mousePos.x}px ${mousePos.y}px, rgba(59,130,246,0.09), transparent 80%)`,
         }}
       />
 
-      {/* Background blobs */}
+      {/* Background blobs with aurora animation */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-        <div className="absolute top-[-20%] right-[-10%] w-[500px] h-[500px] bg-blue-500/[0.07] rounded-full blur-[150px]" />
-        <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-purple-500/[0.07] rounded-full blur-[150px]" />
-        <div className="absolute top-[40%] left-[50%] w-[400px] h-[400px] bg-pink-500/[0.04] rounded-full blur-[150px]" />
+        <div className="aurora-blob absolute top-[-20%] right-[-10%] w-[500px] h-[500px] bg-blue-500/[0.08] rounded-full blur-[150px]" />
+        <div className="aurora-blob absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-purple-500/[0.08] rounded-full blur-[150px]" style={{animationDelay:'-6s'}} />
+        <div className="aurora-blob absolute top-[40%] left-[50%] w-[400px] h-[400px] bg-pink-500/[0.05] rounded-full blur-[150px]" style={{animationDelay:'-12s'}} />
       </div>
 
       {/* Grid pattern */}
@@ -45,12 +53,19 @@ export default function App() {
       <div className="relative z-10 px-6 md:px-20">
         <Navbar />
         <Hero />
+        <div className="section-divider max-w-4xl mx-auto my-2" />
         <About />
+        <div className="section-divider max-w-4xl mx-auto my-2" />
         <Stats />
+        <div className="section-divider max-w-4xl mx-auto my-2" />
         <Skills />
+        <div className="section-divider max-w-4xl mx-auto my-2" />
         <Experience />
+        <div className="section-divider max-w-4xl mx-auto my-2" />
         <Projects />
+        <div className="section-divider max-w-4xl mx-auto my-2" />
         <Certifications />
+        <div className="section-divider max-w-4xl mx-auto my-2" />
         <Contact />
         <Footer />
       </div>

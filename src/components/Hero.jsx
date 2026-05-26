@@ -4,9 +4,18 @@ import { FaGithub, FaLinkedin, FaFileDownload } from 'react-icons/fa';
 
 const titles = [
   'Machine Learning Engineer',
+  'React Native Developer',
   'AI Enthusiast',
   'Cloud Practitioner',
   'Problem Solver',
+];
+
+const floatingTech = [
+  { label: 'React Native', color: '#61DAFB', angle: 0 },
+  { label: 'Firebase', color: '#FFA000', angle: 72 },
+  { label: 'Python', color: '#3776AB', angle: 144 },
+  { label: 'TypeScript', color: '#3178C6', angle: 216 },
+  { label: 'AWS', color: '#FF9900', angle: 288 },
 ];
 
 export default function Hero() {
@@ -49,6 +58,40 @@ export default function Hero() {
 
   return (
     <section className="min-h-screen flex flex-col items-center justify-center text-center pt-20 relative">
+      {/* Floating tech bubbles */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {floatingTech.map((tech, i) => (
+          <motion.div
+            key={tech.label}
+            className="absolute left-1/2 top-1/2"
+            animate={{
+              x: Math.cos((tech.angle * Math.PI) / 180) * 260,
+              y: Math.sin((tech.angle * Math.PI) / 180) * 160,
+              rotate: [0, 360],
+            }}
+            transition={{
+              rotate: { duration: 20 + i * 4, repeat: Infinity, ease: 'linear' },
+              x: { duration: 0 },
+              y: { duration: 0 },
+            }}
+            style={{ translateX: '-50%', translateY: '-50%' }}
+          >
+            <motion.div
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 3 + i * 0.7, repeat: Infinity, ease: 'easeInOut' }}
+              className="text-xs font-semibold px-3 py-1.5 rounded-full border backdrop-blur-sm whitespace-nowrap"
+              style={{
+                color: tech.color,
+                borderColor: tech.color + '40',
+                backgroundColor: tech.color + '12',
+                boxShadow: `0 0 12px ${tech.color}20`,
+              }}
+            >
+              {tech.label}
+            </motion.div>
+          </motion.div>
+        ))}
+      </div>
       <motion.div
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}

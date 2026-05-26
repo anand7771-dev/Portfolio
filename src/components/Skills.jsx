@@ -9,7 +9,7 @@ export default function Skills() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-4xl font-bold mb-14 text-center bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
+        className="text-4xl font-bold mb-14 text-center bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent glow-heading"
       >
         Skills
       </motion.h2>
@@ -35,7 +35,7 @@ export default function Skills() {
                   transition={{ duration: 0.3, delay: idx * 0.05 }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.1, y: -5 }}
-                  className="flex items-center gap-3 bg-white/5 border border-white/10 backdrop-blur-sm px-5 py-3 rounded-xl hover:border-blue-500/30 hover:bg-blue-500/5 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 cursor-default"
+                  className="shimmer-hover tilt-card flex items-center gap-3 bg-white/5 border border-white/10 backdrop-blur-sm px-5 py-3 rounded-xl hover:border-blue-500/30 hover:bg-blue-500/5 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 cursor-default"
                 >
                   <skill.icon className="text-xl text-blue-400" />
                   <span className="text-gray-300 text-sm font-medium">
