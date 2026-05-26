@@ -26,7 +26,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="text-gray-900 min-h-screen font-sans relative overflow-hidden" style={{background: 'linear-gradient(135deg, #f0f4ff 0%, #eaedff 40%, #f5f0ff 70%, #f0f4ff 100%)'}}>
+    <div className="text-gray-900 min-h-screen font-sans relative overflow-hidden" style={{background: 'linear-gradient(135deg, #f9faff 0%, #f5f7ff 50%, #faf8ff 100%)'}}>
       {/* Scroll progress bar */}
       <ScrollProgressBar />
 

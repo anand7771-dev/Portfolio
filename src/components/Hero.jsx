@@ -83,15 +83,12 @@ export default function Hero() {
             Available for Internships & Opportunities
           </motion.div>
 
-          {/* Name */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.25, duration: 0.7 }}
-            className="text-5xl md:text-7xl font-black tracking-tight leading-none mb-4"
+            className="text-6xl md:text-8xl font-black tracking-tight leading-none mb-4"
           >
-            <span className="text-gray-900">Hi, I'm </span>
-            <br />
             <span className="relative inline-block">
               <span className="bg-gradient-to-r from-blue-600 via-violet-600 to-purple-600 bg-clip-text text-transparent">
                 Anand Dev
@@ -219,8 +216,8 @@ export default function Hero() {
               AD
             </div>
             <div className="text-center mt-1">
-              <div className="font-bold text-gray-900 text-sm">Anand Dev</div>
-              <div className="text-xs text-gray-400 mt-0.5">ML Engineer</div>
+              <div className="font-bold text-gray-500 text-xs tracking-widest uppercase">ML Engineer</div>
+              <div className="text-xs text-gray-400 mt-0.5">KIIT University</div>
             </div>
             {/* Online indicator */}
             <div className="flex items-center gap-1.5 mt-1 px-3 py-1 rounded-full bg-green-50 border border-green-100">
