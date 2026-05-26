@@ -171,27 +171,7 @@ export default function Hero() {
             </a>
           </motion.div>
 
-          {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.4, duration: 0.6 }}
-            className="mt-10 flex gap-8 justify-center lg:justify-start"
-          >
-            {[
-              { value: '8+',  label: 'Projects' },
-              { value: '12',  label: 'Certs' },
-              { value: '2',   label: 'Internships' },
-              { value: '4',   label: 'AWS Certs' },
-            ].map((s, i) => (
-              <div key={s.label} className="text-center lg:text-left">
-                <div className="text-2xl font-black bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent">
-                  {s.value}
-                </div>
-                <div className="text-xs text-gray-400 mt-0.5 font-medium">{s.label}</div>
-              </div>
-            ))}
-          </motion.div>
+
         </div>
 
         {/* ── Right Column: Visual Card ── */}
