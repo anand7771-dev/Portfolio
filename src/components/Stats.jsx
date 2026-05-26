@@ -55,7 +55,7 @@ export default function Stats() {
       className="py-16"
     >
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto bg-white/[0.03] border border-white/10 rounded-2xl p-10 backdrop-blur-sm">
-        <Counter target={7} label="Projects" suffix="+" />
+        <Counter target={8} label="Projects" suffix="+" />
         <Counter target={12} label="Certifications" />
         <Counter target={2} label="Internship" />
         <Counter target={4} label="AWS Certs" />
