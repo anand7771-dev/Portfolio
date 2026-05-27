@@ -90,15 +90,14 @@ export default function Hero() {
             className="text-6xl md:text-8xl font-black tracking-tight leading-none mb-4"
           >
             <span className="relative inline-block">
-              <span className="bg-gradient-to-r from-blue-600 via-violet-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-400 via-violet-400 to-purple-400 bg-clip-text text-transparent">
                 Anand Dev
               </span>
-              {/* Underline accent */}
               <motion.div
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ delay: 1, duration: 0.8 }}
-                className="absolute -bottom-1 left-0 right-0 h-[3px] rounded-full bg-gradient-to-r from-blue-500 via-violet-500 to-purple-500 origin-left"
+                className="absolute -bottom-1 left-0 right-0 h-[3px] rounded-full bg-gradient-to-r from-blue-400 via-violet-400 to-purple-400 origin-left"
               />
             </span>
           </motion.h1>
@@ -110,7 +109,7 @@ export default function Hero() {
             transition={{ delay: 0.5, duration: 0.8 }}
             className="h-10 mt-4 flex items-center lg:justify-start justify-center"
           >
-            <span className="text-xl md:text-2xl font-semibold text-violet-600">
+            <span className="text-xl md:text-2xl font-semibold text-violet-300">
               {displayText}
             </span>
             <span className="text-2xl text-violet-400 animate-pulse ml-0.5">|</span>
@@ -121,10 +120,10 @@ export default function Hero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.75, duration: 0.6 }}
-            className="mt-5 text-gray-500 text-base leading-relaxed max-w-lg lg:mx-0 mx-auto"
+            className="mt-5 text-gray-400 text-base leading-relaxed max-w-lg lg:mx-0 mx-auto"
           >
             Building intelligent systems at{' '}
-            <span className="text-blue-600 font-semibold">KIIT University</span> — from
+            <span className="text-blue-400 font-semibold">KIIT University</span> — from
             AI-powered apps to real-world construction management software.
           </motion.p>
 
@@ -137,7 +136,7 @@ export default function Hero() {
           >
             <a
               href="#projects"
-              className="group inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-violet-600 text-white px-7 py-3 rounded-2xl font-semibold hover:shadow-xl hover:shadow-violet-200 hover:-translate-y-0.5 transition-all duration-300"
+              className="group inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-violet-600 text-white px-7 py-3 rounded-2xl font-semibold hover:shadow-xl hover:shadow-violet-500/30 hover:-translate-y-0.5 transition-all duration-300"
             >
               View Projects
               <HiArrowRight className="group-hover:translate-x-1 transition-transform duration-200" />
@@ -146,7 +145,7 @@ export default function Hero() {
               href="https://github.com/anand7771-dev"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-white border border-gray-200 text-gray-700 px-6 py-3 rounded-2xl font-semibold hover:bg-gray-50 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+              className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white px-6 py-3 rounded-2xl font-semibold hover:bg-white/20 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
             >
               <FaGithub className="text-lg" /> GitHub
             </a>
@@ -154,7 +153,7 @@ export default function Hero() {
               href="https://linkedin.com/in/anand-dev-0ba936294/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 text-blue-700 px-6 py-3 rounded-2xl font-semibold hover:bg-blue-100 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+              className="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-400/30 text-blue-300 px-6 py-3 rounded-2xl font-semibold hover:bg-blue-500/30 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
             >
               <FaLinkedin className="text-lg" /> LinkedIn
             </a>
@@ -162,7 +161,7 @@ export default function Hero() {
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-gray-900 text-white px-6 py-3 rounded-2xl font-semibold hover:bg-gray-800 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
+              className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white px-6 py-3 rounded-2xl font-semibold hover:bg-white/20 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
             >
               <FaFileDownload /> Resume
             </a>
@@ -207,22 +206,19 @@ export default function Hero() {
           <motion.div
             animate={{ y: [0, -8, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-            className="relative z-10 w-48 h-48 rounded-3xl bg-white/80 backdrop-blur-xl border border-indigo-100 shadow-2xl shadow-indigo-100 flex flex-col items-center justify-center gap-2 p-4"
+            className="relative z-10 w-48 h-48 rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl shadow-blue-500/10 flex flex-col items-center justify-center gap-2 p-4"
           >
-            {/* Gradient ring */}
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10 pointer-events-none" />
-
-            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600 to-violet-600 flex items-center justify-center text-white text-2xl font-black shadow-lg shadow-blue-200">
+            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-violet-600 flex items-center justify-center text-white text-2xl font-black shadow-lg shadow-blue-500/30">
               AD
             </div>
             <div className="text-center mt-1">
-              <div className="font-bold text-gray-500 text-xs tracking-widest uppercase">ML Engineer</div>
-              <div className="text-xs text-gray-400 mt-0.5">KIIT University</div>
+              <div className="font-bold text-gray-400 text-xs tracking-widest uppercase">ML Engineer</div>
+              <div className="text-xs text-gray-500 mt-0.5">KIIT University</div>
             </div>
-            {/* Online indicator */}
-            <div className="flex items-center gap-1.5 mt-1 px-3 py-1 rounded-full bg-green-50 border border-green-100">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-              <span className="text-xs text-green-700 font-medium">Open to work</span>
+            <div className="flex items-center gap-1.5 mt-1 px-3 py-1 rounded-full bg-green-500/10 border border-green-500/20">
+              <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+              <span className="text-xs text-green-400 font-medium">Open to work</span>
             </div>
           </motion.div>
 

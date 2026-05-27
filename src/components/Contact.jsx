@@ -44,7 +44,7 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <p className="text-gray-600 text-lg leading-relaxed">
+          <p className="text-gray-300 text-lg leading-relaxed">
             I'm always interested in hearing about new opportunities,
             collaborations, or just having a chat about AI and technology.
           </p>
@@ -94,7 +94,7 @@ export default function Contact() {
             type="text"
             placeholder="Your Name"
             required
-            className="w-full bg-white/80 border border-indigo-200 rounded-xl px-4 py-3 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:bg-white focus:shadow-sm transition-all duration-300"
+            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500/50 focus:bg-white/[0.07] transition-all duration-300"
             value={formData.name}
             onChange={(e) =>
               setFormData({ ...formData, name: e.target.value })
@@ -104,7 +104,7 @@ export default function Contact() {
             type="email"
             placeholder="Your Email"
             required
-            className="w-full bg-white/80 border border-indigo-200 rounded-xl px-4 py-3 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:bg-white focus:shadow-sm transition-all duration-300"
+            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500/50 focus:bg-white/[0.07] transition-all duration-300"
             value={formData.email}
             onChange={(e) =>
               setFormData({ ...formData, email: e.target.value })
@@ -114,7 +114,7 @@ export default function Contact() {
             placeholder="Your Message"
             rows={4}
             required
-            className="w-full bg-white/80 border border-indigo-200 rounded-xl px-4 py-3 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:bg-white focus:shadow-sm transition-all duration-300 resize-none"
+            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500/50 focus:bg-white/[0.07] transition-all duration-300 resize-none"
             value={formData.message}
             onChange={(e) =>
               setFormData({ ...formData, message: e.target.value })

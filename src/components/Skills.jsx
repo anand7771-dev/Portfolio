@@ -9,7 +9,7 @@ export default function Skills() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-4xl font-bold mb-14 text-center bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent glow-heading"
+        className="text-4xl font-bold mb-14 text-center bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent glow-heading"
       >
         Skills
       </motion.h2>
@@ -23,7 +23,7 @@ export default function Skills() {
             transition={{ duration: 0.5, delay: catIdx * 0.1 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-lg font-semibold text-gray-500 mb-5 text-center tracking-wide uppercase">
+            <h3 className="text-lg font-semibold text-gray-400 mb-5 text-center tracking-wide uppercase">
               {category.name}
             </h3>
             <div className="flex flex-wrap justify-center gap-4">
@@ -35,10 +35,10 @@ export default function Skills() {
                   transition={{ duration: 0.3, delay: idx * 0.05 }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.1, y: -5 }}
-                  className="shimmer-hover tilt-card flex items-center gap-3 bg-white/70 border border-indigo-100 backdrop-blur-sm px-5 py-3 rounded-xl hover:border-blue-400/50 hover:bg-white hover:shadow-md hover:shadow-blue-100 transition-all duration-300 cursor-default"
+                  className="shimmer-hover tilt-card flex items-center gap-3 bg-white/5 border border-white/10 backdrop-blur-sm px-5 py-3 rounded-xl hover:border-blue-500/30 hover:bg-blue-500/5 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 cursor-default"
                 >
                   <skill.icon className="text-xl text-blue-400" />
-                  <span className="text-gray-700 text-sm font-medium">
+                  <span className="text-gray-300 text-sm font-medium">
                     {skill.name}
                   </span>
                 </motion.div>
