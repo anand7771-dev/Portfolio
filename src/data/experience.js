@@ -7,6 +7,7 @@ export const experience = [
     desc: 'Currently working as a Software Engineering Intern at Siemens, contributing to industrial software solutions and digital transformation initiatives. Gaining hands-on experience with enterprise-grade systems and engineering workflows.',
     tech: ['Software Engineering', 'Industrial IoT', 'Digital Transformation'],
     offerLetter: '/certificates/Siemens_Offer_Letter.pdf',
+    certificate: '/certificates/Siemens_Internship_Certificate.pdf',
   },
   {
     role: 'Machine Learning Intern',
@@ -15,5 +16,6 @@ export const experience = [
     desc: 'Built production-ready ML models for diabetes prediction and creditworthiness assessment. Implemented Random Forest and Logistic Regression pipelines with feature engineering, achieving 85%+ accuracy. Developed automated essay scoring system using NLP techniques.',
     tech: ['Python', 'Scikit-learn', 'Pandas', 'NLP'],
     offerLetter: '/certificates/CodeAlpha_Offer_Letter.pdf',
+    certificate: '/certificates/CodeAlpha_Internship_Certificate.pdf',
   },
 ];

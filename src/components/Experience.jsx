@@ -69,16 +69,28 @@ export default function Experience() {
                     ))}
                   </div>
                 )}
-                {exp.offerLetter && (
-                  <div className="mt-4">
-                    <a
-                      href={exp.offerLetter}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 bg-blue-500/10 text-blue-300 rounded-full border border-blue-500/20 hover:bg-blue-500/20 transition-colors duration-200"
-                    >
-                      📄 View Offer Letter
-                    </a>
+                {(exp.offerLetter || exp.certificate) && (
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {exp.offerLetter && (
+                      <a
+                        href={exp.offerLetter}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 bg-blue-500/10 text-blue-300 rounded-full border border-blue-500/20 hover:bg-blue-500/20 transition-colors duration-200"
+                      >
+                        📄 View Offer Letter
+                      </a>
+                    )}
+                    {exp.certificate && (
+                      <a
+                        href={exp.certificate}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 bg-green-500/10 text-green-300 rounded-full border border-green-500/20 hover:bg-green-500/20 transition-colors duration-200"
+                      >
+                        🏅 View Certificate
+                      </a>
+                    )}
                   </div>
                 )}
               </div>
