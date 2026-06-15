@@ -73,6 +73,14 @@ body {
 }
 .aurora-blob { animation: aurora 18s ease-in-out infinite; }
 
+/* ─── 3D rotating cube ─── */
+@keyframes rotateCube {
+  0%   { transform: rotateX(0deg)   rotateY(0deg)   rotateZ(0deg); }
+  33%  { transform: rotateX(120deg) rotateY(240deg)  rotateZ(90deg); }
+  66%  { transform: rotateX(240deg) rotateY(120deg)  rotateZ(270deg); }
+  100% { transform: rotateX(360deg) rotateY(360deg)  rotateZ(360deg); }
+}
+
 /* ─── Back to top ─── */
 @keyframes bounce-up {
   0%, 100% { transform: translateY(0); }

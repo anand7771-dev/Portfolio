@@ -9,7 +9,7 @@ import Projects from './components/Projects';
 import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import ParticleField from './components/ParticleField';
+import SpaceBackground from './components/SpaceBackground';
 import ScrollProgressBar from './components/ScrollProgressBar';
 import CursorTrail from './components/CursorTrail';
 import BackToTop from './components/BackToTop';
@@ -26,32 +26,26 @@ export default function App() {
   }, []);
 
   return (
-    <div className="bg-gray-950 text-white min-h-screen font-sans relative overflow-hidden">
+    <div className="text-white min-h-screen font-sans relative overflow-hidden">
       {/* Scroll progress bar */}
       <ScrollProgressBar />
 
-      {/* Animated particle field */}
-      <ParticleField />
+      {/* Galaxy + Jupiter canvas background */}
+      <SpaceBackground />
 
       {/* Cursor trail */}
       <CursorTrail />
 
-      {/* Mouse-follow gradient */}
+      {/* Mouse-follow soft glow */}
       <div
         className="pointer-events-none fixed inset-0 z-0 transition-opacity duration-300"
         style={{
-          background: `radial-gradient(700px at ${mousePos.x}px ${mousePos.y}px, rgba(99,102,241,0.13), transparent 80%)`,
+          background: `radial-gradient(600px at ${mousePos.x}px ${mousePos.y}px, rgba(99,102,241,0.08), transparent 80%)`,
         }}
       />
 
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-        <div className="aurora-blob absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-blue-600/[0.15] rounded-full blur-[120px]" />
-        <div className="aurora-blob absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-purple-600/[0.13] rounded-full blur-[120px]" style={{animationDelay:'-6s'}} />
-        <div className="aurora-blob absolute top-[35%] left-[45%] w-[500px] h-[500px] bg-indigo-500/[0.10] rounded-full blur-[120px]" style={{animationDelay:'-12s'}} />
-        <div className="aurora-blob absolute top-[60%] right-[20%] w-[350px] h-[350px] bg-cyan-500/[0.07] rounded-full blur-[100px]" style={{animationDelay:'-4s'}} />
-      </div>
-
-      <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(to_right,#ffffff04_1px,transparent_1px),linear-gradient(to_bottom,#ffffff04_1px,transparent_1px)] bg-[size:50px_50px]" />
+      {/* Grid overlay */}
+      <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:50px_50px]" />
 
       {/* Main content */}
       <div className="relative z-10 px-6 md:px-20">
