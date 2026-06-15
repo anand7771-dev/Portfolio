@@ -9,7 +9,7 @@ import Projects from './components/Projects';
 import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import SpaceBackground from './components/SpaceBackground';
+import AIBackground from './components/AIBackground';
 import ScrollProgressBar from './components/ScrollProgressBar';
 import CursorTrail from './components/CursorTrail';
 import BackToTop from './components/BackToTop';
@@ -30,8 +30,8 @@ export default function App() {
       {/* Scroll progress bar */}
       <ScrollProgressBar />
 
-      {/* Galaxy + Jupiter canvas background */}
-      <SpaceBackground />
+      {/* AI Robot animated background */}
+      <AIBackground />
 
       {/* Cursor trail */}
       <CursorTrail />
