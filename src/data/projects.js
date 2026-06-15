@@ -3,7 +3,7 @@ export const projects = [
     title: 'MS Vinyak InfraTrack',
     desc: 'Full-featured construction finance & project management mobile app for MS Vinyak Construction. Tracks income/expenses, manages multiple projects, generates PDF reports, handles company documents, and secures data with biometric authentication — all powered by Firebase in real time.',
     tech: ['React Native', 'Expo', 'TypeScript', 'Firebase', 'Zustand', 'Expo Router', 'EAS Build'],
-    apk: '/MS-Vinyak-Construction.apk',
+    apk: 'https://github.com/anand7771-dev/Portfolio/releases/download/v1.0.0/MS-Vinyak-Construction.apk',
     github: 'https://github.com/anand7771-dev/vinyak-infratrack',
   },
   {
